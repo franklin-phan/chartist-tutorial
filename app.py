@@ -8,6 +8,7 @@ import pandas as pd
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
+#about to graph some movie data
 
 # Attach our dataframe to our app
 app.loaded_csv = pd.read_csv("multiTimeline.csv", skiprows=1)
@@ -57,3 +58,4 @@ def get_time_series_data():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
+
